@@ -28,4 +28,15 @@ function getItemById(item_id) {
     });
 }
 
-export { getItems, getItemById }
+function getUserbyUsername(username) {
+    return axios.get(`${baseUrl}/users/${username}`).then(({ data }) => {
+        console.log(data)
+        const user = data.user;
+        return user;
+    }).catch((err) => {
+        console.error("Error fetching User", err);
+        throw err;
+    });
+}
+
+export { getItems, getItemById, getUserbyUsername }

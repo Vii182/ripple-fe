@@ -13,31 +13,36 @@ module.exports = {
         Michroma: ['"Michroma"', "serif"],
       },
       colors: {
-        background: {
-          light: "#c4f6ff",
-          DEFAULT: "#c4f6ff",
-          dark: "#2e2e2e",
+        bg: {
+          light: "#d8f3dc",
+          DEFAULT: "#d8fdc",
+          dark: "#081c15",
         },
-        text: {
-          light: "#0cc0df",
-          DEFAULT: "#0cc0df",
-          dark: "white",
+        text1: {
+          light: "#081c15",
+          DEFAULT: "#081c15",
+          dark: "#d8f3dc",
+        },
+        text2: {
+          light: "#1B4332",
+          DEFAULT: "#1B4332",
+          dark: "#b7e4c7",
         },
         accent1: {
-          light: "#105282",
-          DEFAULT: "#105282",
-          dark: "#ffffff",
+          light: "#2D6A4F",
+          DEFAULT: "#2D6A4F",
+          dark: "#95D5B2",
         },
         accent2: {
-          light: "#1d8297",
-          DEFAULT: "#1d8297",
-          dark: "#ffffff",
+          light: "#40916C",
+          DEFAULT: "#40916C",
+          dark: "#74C69D",
         },
         accent3: {
-          light: "#083663",
-          DEFAULT: "#083663",
-          dark: "#ffffff",
-        },
+          light: "#52B788",
+          DEFAULT: "#52B788",
+          dark: "#52B788",
+        }
       },
     },
   },

@@ -1,7 +1,7 @@
 const ItemCard = ({ item }) => {
     return (
         <div className="min-h-[420px] max-w-lg mx-auto bg-gray-50 rounded-lg shadow-md overflow-hidden mb-4">
-            <img src={item.image_url} loading="eager" />
+            <img src={item.image_url} loading="eager" className="object-cover w-auto h-[400px] flex grow" />
             <div className="p-4">
                 <h2 className="text-xl font-bold text-text">{item.item_name}</h2>
                 <p className="text-accent3">UserID: {item.user_id}</p>
