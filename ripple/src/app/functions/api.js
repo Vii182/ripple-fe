@@ -15,6 +15,17 @@ function getItems(category = null, sorted = "date_listed", order = "desc") {
         console.error("Error Retrieving Items", err);
         throw err;
     });
+};
+
+function getItemById(item_id) {
+    return axios.get(`${baseUrl}/items/${item_id}`).then(({ data }) => {
+        const item = data.item;
+        console.log(item)
+        return item;
+    }).catch((err) => {
+        console.error("Error fetching Item", err);
+        throw err;
+    });
 }
 
-export { getItems }
+export { getItems, getItemById }

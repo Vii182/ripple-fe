@@ -1,5 +1,4 @@
-import ItemsList from "../components/Items/ItemsList";
-import Header from "../components/Misc/Header";
+import ItemsList from "@/components/Items/ItemsList";
 
 export default function ItemsPage() {
     return (
