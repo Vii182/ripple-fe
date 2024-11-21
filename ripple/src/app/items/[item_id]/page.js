@@ -41,7 +41,7 @@ const SingleItem = () => {
   }
 
   return (
-    <section className="flex items-center justify-center bg-white px-4">
+    <section className="font-Quicksand flex items-center justify-center bg-white px-4">
       <main className="mb-10 mt-3 w-full max-w-4xl rounded-2xl overflow-hidden">
         <div className="bg-gray-50 rounded-2xl shadow-lg border-8 border-gray-100 mx-2">
           <div className="flex items-center justify-center mx-2">
