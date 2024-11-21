@@ -34,14 +34,14 @@ const SingleItem = () => {
 
   if (loading) {
     return (
-      <p className="text-4xl font-semibold px-4 flex justify-start mt-10">
+      <p className="text-4xl text-black font-semibold px-4 flex justify-start mt-10">
         Loading...
       </p>
     );
   }
 
   return (
-    <section className="font-Quicksand flex items-center justify-center bg-white px-4">
+    <section className="font-Quicksand flex items-center justify-center px-4 bg-gradient-to-b from-white via-lime-500 to-white min-h-screen">
       <main className="mb-10 mt-3 w-full max-w-4xl rounded-2xl overflow-hidden">
         <div className="bg-gray-50 rounded-2xl shadow-lg border-8 border-gray-100 mx-2">
           <div className="flex items-center justify-center mx-2">
@@ -71,7 +71,7 @@ const SingleItem = () => {
             <p className="text-accent2">Available: {item.reserve_status}</p>
           </div>
         </div>
-        <div className="p-6 md:p-8 flex flex-col justify-center mt-5 bg-gray-50 border-8 border-gray-100 shadow-lg mx-2 rounded-2xl px-4 px-y">
+        <div className="text-accent3 p-6 md:p-8 flex flex-col justify-center mt-5 bg-gray-50 border-8 border-gray-100 shadow-lg mx-2 rounded-2xl px-4 px-y">
             <h1>Reserve Item:</h1>
             <p>Please reserve your item here</p>
         </div>

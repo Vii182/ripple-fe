@@ -38,7 +38,7 @@ const ItemsList = ({
 
   if (loading) {
     return (
-      <p className="text-4xl font-semibold px-4 flex justify-start mt-10">
+      <p className="text-4xl text-black font-semibold px-4 flex justify-start mt-10">
         Loading items...
       </p>
     );
