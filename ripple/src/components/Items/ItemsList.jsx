@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getItems } from "@/app/functions/api";
 import Link from "next/link";
 import ItemCard from "./ItemCard";
+import Loading from "../Misc/Loading";
 
 const ItemsList = ({
   category = null,
@@ -37,11 +38,7 @@ const ItemsList = ({
   }
 
   if (loading) {
-    return (
-      <p className="text-4xl text-black font-semibold px-4 flex justify-start mt-10">
-        Loading items...
-      </p>
-    );
+    return <Loading />;
   }
 
   return (
