@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useContext } from "react";
 import { UserContext } from "@/context/UserContext";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
@@ -41,6 +42,8 @@ const Navbar = () => {
           LOGIN
         </Link>
       )}
+    </div>
+    <MobileMenu />
     </nav>
   );
 };
