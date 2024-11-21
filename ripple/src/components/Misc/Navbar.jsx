@@ -8,6 +8,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { SiFoodpanda } from "react-icons/si";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoHeartCircleOutline } from "react-icons/io5";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
@@ -53,7 +54,9 @@ const Navbar = () => {
         <Link href="/login" className={linkStyles}>
           LOGIN
         </Link>
+        
       )}
+      <DarkModeToggle />
     </div>
     <MobileMenu user={user} logout={logout} />
     </nav>

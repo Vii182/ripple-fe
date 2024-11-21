@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import DarkModeToggle from "./DarkModeToggle";
 
 const MobileMenu = ({ user, logout }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,6 +76,7 @@ const MobileMenu = ({ user, logout }) => {
                 LOGIN
               </Link>
             )}
+            <DarkModeToggle />
           </div>
         </div>
       )}
