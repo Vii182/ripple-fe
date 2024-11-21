@@ -39,4 +39,14 @@ function getUserbyUsername(username) {
     });
 }
 
-export { getItems, getItemById, getUserbyUsername }
+function postItem(itemData) {
+    return axios.post(`${baseUrl}/items`, itemData).then(({ data }) => {
+        console.log(data);
+    })
+    .catch((err) => {
+        console.error("Error posting Item!", err);
+        throw err;
+    });
+}
+
+export { getItems, getItemById, getUserbyUsername, postItem }
