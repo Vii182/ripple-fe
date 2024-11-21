@@ -3,8 +3,8 @@ import ItemsList from "@/components/Items/ItemsList";
 export default function ItemsPage() {
   return (
     <section>
-      <main className="bg-background-dark font-Quicksand min-h-screen pt-8"> 
-        <h1 className="text-3xl font-bold text-center mb-6">Items</h1>
+      <main className="bg-gradient-to-b from-white via-lime-500 to-white font-Quicksand min-h-screen pt-8"> 
+        <h1 className="text-3xl font-bold text-black text-center mb-6">Items</h1>
         <div className="px-4">
           <ItemsList />
         </div>

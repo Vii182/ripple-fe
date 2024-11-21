@@ -12,10 +12,11 @@ const Navbar = () => {
     redirect("/");
   };
 
-  const linkStyles = "text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600";
+  const linkStyles = "text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500";
 
   return (
     <nav className="mb-2 sm:mb-0 font-Quicksand text-black flex items-center space-x-6">
+      <div className="hidden lg:flex items-center space-x-4">
       <Link href="/" className={linkStyles}>
         HOME
       </Link>
@@ -28,7 +29,7 @@ const Navbar = () => {
       {user ? (
         <>
           <span className="text-lg sm:text-xl text-orange-400 font-bold">
-            Hello, {user.username}
+             {user.username.toUpperCase()}
           </span>
           <button
             onClick={handleQuickLogout}

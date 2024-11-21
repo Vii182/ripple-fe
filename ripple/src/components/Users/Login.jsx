@@ -29,12 +29,12 @@ const LoginForm = () => {
     <div className="login-component">
       {user ? (
         <>
-          <span className="text-orange-600 text-lg font-semibold flex justify-center text-center">
-            Welcome, {user.username}
+          <span className="font-Quicksand text-black text-lg font-semibold flex justify-center text-center">
+            WELCOME {user.username.toUpperCase()}
           </span>
           <button
             onClick={logout}
-            className="mt-4 p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 w-full"
+            className="font-Quicksand mt-4 p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 w-full"
           >
             Logout
           </button>
@@ -46,11 +46,11 @@ const LoginForm = () => {
             value={username}
             onChange={(event) => setUsername(event.target.value)}
             placeholder="Enter Username"
-            className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-indigo-500"
+            className="text-black w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-indigo-500"
           />
           <button
             onClick={handleLogin}
-            className="w-full p-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full p-3 bg-lime-500 text-white font-semibold rounded-lg hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-lime-400"
           >
             Login
           </button>

@@ -10,38 +10,48 @@ const MobileMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  }
+
+  const linkStyles = "block text-base font-medium text-black hover:text-orange-500"
+
   return (
-    <div className="relative">
+    <div className="relative lg:hidden ">
       <button
-        onClick={toggleMenu}
-        className="text-white text-3xl focus:outline-none lg:hidden"
+        onClick ={toggleMenu}
+        className="text-black text-3xl focus:outline-none lg:hidden"
       >
         <FaBars />
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 p-4 bg-white bg-opacity-80 rounded-lg shadow-lg w-48" style={{
+        <div className="absolute right-0 mt-2 p-4 bg-white bg-opacity-85 rounded-lg shadow-lg w-48" style={{
             top: "100%",
             zIndex: 1000,
           }}>
           <div className="space-y-4">
-            <Link href="/" className="block text-sm text-black hover:text-orange-500">
+            <Link href="/" className={linkStyles}
+            onClick={closeMenu}>
               HOME
             </Link>
             <Link
               href="/items"
-              className="block text-sm text-black hover:text-orange-500"
+              className={linkStyles}
+              onClick={closeMenu}
             >
               ITEMS
             </Link>
             <Link
               href="/list-an-item"
-              className="block text-sm text-black hover:text-orange-500"
+              className={linkStyles}
+              onClick={closeMenu}
             >
               LIST AN ITEM
             </Link>
             <Link
               href="/foodbanks"
-              className="block text-sm text-black hover:text-orange-500"
+              className={linkStyles}
+              onClick={closeMenu}
             >
               FOODBANKS
             </Link>

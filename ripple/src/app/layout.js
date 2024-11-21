@@ -7,12 +7,12 @@ import { LocationProvider } from "@/context/LocationContext";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gradient-to-b from-white via-white to-lime-500">
         <LocationProvider>
         <UserProvider>
           <Header />
-          <BackButton />
           <div className="h-2 bg-gradient-to-r from-bg-dark via-bg-light to-accent2 shadow-lg"></div>
+          <BackButton />
           {children}
         </UserProvider>
         </LocationProvider>
