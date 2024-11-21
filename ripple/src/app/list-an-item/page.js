@@ -6,7 +6,7 @@ import ItemForm from "@/components/Items/ItemForm";
 
 const PostItemPage = () => {
     return (
-        <section>
+        <section className="min-h-screen">
             <div>
                 <ItemForm />
             </div>
