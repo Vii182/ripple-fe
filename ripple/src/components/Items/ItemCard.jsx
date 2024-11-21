@@ -1,18 +1,27 @@
 const ItemCard = ({ item }) => {
     return (
-        <div className="min-h-[420px] max-w-lg mx-auto bg-gray-50 rounded-lg shadow-md overflow-hidden mb-4">
-            <img src={item.image_url} loading="eager" className="object-cover w-auto h-[400px] flex grow" />
-            <div className="p-4">
-                <h2 className="text-xl font-bold text-text">{item.item_name}</h2>
-                <p className="text-accent3">UserID: {item.user_id}</p>
-                <p className="text-accent3">{item.description}</p>
-                <p className="text-accent2">Collection Point: {item.collection_point}</p>
-                <p className="text-accent2">Expiry Date(if any): {new Date(item.date_of_expire).toLocaleDateString() || "no expiry"}</p>
-                <p className="text-accent2">Date Listed: {new Date(item.date_listed).toLocaleDateString()}</p>
-                <p className="text-accent2">Available: {item.reserve_status}</p>
-            </div>
+        <div className="h-[400px] w-[350px] bg-gray-50 rounded-xl shadow-md overflow-hidden mb-4 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"> 
+        <div className="h-[200px] w-full">
+          <img 
+            src={item.image_url} 
+            loading="eager" 
+            className="w-full h-full object-cover"
+          />
         </div>
+        <div className="p-4 flex flex-col gap-2">
+          <h2 className="text-lg text-black font-semibold text-text truncate">{item.item_name}</h2>
+          <p className="text-sm text-accent3 line-clamp-2">{item.description}</p>
+          <p className="text-sm text-accent2">Collection: {item.collection_point}</p>
+          <p className="text-sm text-accent2">Expiry: {new Date(item.date_of_expire).toLocaleDateString() || "no expiry"}</p>
+          <p className="text-sm text-accent2">
+            {item.reserve_status === 'Available' ? 
+              <span className="text-green-600">● Available</span> : 
+              <span className="text-red-600">● Reserved</span>
+            }
+          </p>
+        </div>
+      </div>
     );
-};
-
-export default ItemCard;
+  };
+  
+  export default ItemCard;

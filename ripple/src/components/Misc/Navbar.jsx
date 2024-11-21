@@ -6,47 +6,38 @@ import { UserContext } from "@/context/UserContext";
 
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
-
   const handleQuickLogout = () => {
     logout();
     redirect("/");
   };
 
+  const linkStyles = "text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600";
+
   return (
-    <nav className="mb-2 sm:mb-0 font-Michroma text-text flex items-center space-x-4">
-      <Link
-        href="/"
-        className="text-xs sm:text-sm transition-transform transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600"
-      >
+    <nav className="mb-2 sm:mb-0 font-Quicksand text-black flex items-center space-x-6">
+      <Link href="/" className={linkStyles}>
         HOME
       </Link>
-      <Link
-        href="/items"
-        className="text-xs sm:text-sm transition-transform transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600"
-      >
+      <Link href="/items" className={linkStyles}>
         ITEMS
       </Link>
-      <Link
-        href="/foodbanks"
-        className="text-xs sm:text-sm transition-transform transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600"
-      >
+      <Link href="/foodbanks" className={linkStyles}>
         FOODBANKS
       </Link>
       {user ? (
         <>
-          <span className="text-orange-400">Hello, {user.username}</span>
+          <span className="text-lg sm:text-xl text-orange-400 font-bold">
+            Hello, {user.username}
+          </span>
           <button
             onClick={handleQuickLogout}
-            className="text-sm sm:text-base transition-transform transform hover:scale-110 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="text-lg sm:text-xl font-bold transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600"
           >
             Logout
           </button>
         </>
       ) : (
-        <Link
-          href="/login"
-          className="text-xs sm:text-sm transition-transform transform hover:scale-110 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-600"
-        >
+        <Link href="/login" className={linkStyles}>
           LOGIN
         </Link>
       )}

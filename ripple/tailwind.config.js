@@ -1,4 +1,4 @@
-const { Michroma } = require('next/font/google');
+const { Quicksand } = require('next/font/google');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Michroma: ['"Michroma"', "serif"],
+        Quicksand: ['"Quicksand"', "sans-serif"],
       },
       colors: {
         bg: {
