@@ -19,7 +19,7 @@ const PostItemPage = () => {
 
     const itemData = {
       ...FormData,
-      user_id: user.username,
+      user_id: user.user_id,
       date_listed: new Date().toISOString(),
       date_of_expire: FormData.date_of_expire || null,
     };

@@ -17,9 +17,15 @@ const ItemCard = ({ item }) => {
           Collection: {item.collection_point}
         </p>
         <p className="text-sm text-accent2">
-          Expiry:{" "}
-          {new Date(item.date_of_expire).toLocaleDateString() || "no expiry"}
+          {item.category_id === 8 ? (
+            <span className="text-red-600">Expiry Date: {new Date(item.date_of_expire).toLocaleDateString()}</span>
+          ) : (
+            <span className="text-green-900">No Expiry</span>
+          )}
         </p>
+        <p className="text-sm font-semibold mb-2">
+            Date Listed: {new Date(item.date_listed).toLocaleDateString()}
+          </p>
         <p className="text-sm text-accent2">
           {item.reserve_status === "Available" ? (
             <span className="text-red-600">● Reserved</span>

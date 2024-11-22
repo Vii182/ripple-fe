@@ -22,22 +22,23 @@ const Navbar = () => {
   return (
     <nav className="mb-2 sm:mb-0 font-Quicksand text-black flex items-center space-x-6">
       <div className="hidden lg:flex items-center space-x-4">
+      <IoHomeOutline className="text-black mx-2" />
       <Link href="/" className={linkStyles}>
         HOME
       </Link>
-      <IoHomeOutline className="text-black mx-2" />
+      <IoBagHandleOutline className="text-black mx-2" />
       <Link href="/items" className={linkStyles}>
         ITEMS
       </Link>
-      <IoBagHandleOutline className="text-black mx-2" />
+      <IoHeartCircleOutline className="text-black mx-2" />
       <Link href="/list-an-item" className={linkStyles}>
         LIST AN ITEM
       </Link>
-      <IoHeartCircleOutline className="text-black mx-2" />
+      <SiFoodpanda className="text-black mx-2" />
       <Link href="/foodbanks" className={linkStyles}>
         FOODBANKS
       </Link>
-      <SiFoodpanda className="text-black mx-2" />
+      
       {user ? (
         <>
           <span className="text-lg sm:text-xl text-orange-400 font-bold">

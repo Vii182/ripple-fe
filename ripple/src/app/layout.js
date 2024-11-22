@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
           <UserProvider>
             <Header />
             <div className="bg-gradient-to-b from-white via-lime-500 to-white">
-              <div className="h-2 bg-gradient-to-r from-bg-dark via-bg-light to-accent2 shadow-lg"></div>
+              <div className="h-2 bg-gradient-to-r from-white to-lime-500 shadow-lg"></div>
               <BackButton />
               {children}
             </div>

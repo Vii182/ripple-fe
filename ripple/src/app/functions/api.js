@@ -40,9 +40,8 @@ function getUserbyUsername(username) {
 }
 
 function postItem(itemData) {
-    return axios.post(`${baseUrl}/items`, itemData).then(({ data }) => {
-        console.log(data);
-    })
+    console.log(itemData)
+    return axios.post(`${baseUrl}/items`, itemData).then(({ data }) => data)
     .catch((err) => {
         console.error("Error posting Item!", err);
         throw err;

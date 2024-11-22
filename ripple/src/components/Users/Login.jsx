@@ -8,14 +8,11 @@ const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
 
-  console.log(username)
   const handleLogin = async () => {
     try {
       const validUser = await getUserbyUsername(username);
-      console.log(validUser)
       if (validUser) {
-        console.log("hi");
-        login(username);
+        login(validUser.username, validUser.user_id);
         setUsername("");
         setError(null);
       }

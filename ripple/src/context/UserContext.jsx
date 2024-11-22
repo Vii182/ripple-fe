@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
         }
     }, [user]);
 
-    const login = (username) => setUser({ username });
+    const login = (username, user_id) => setUser({ username, user_id });
     const logout = () => setUser(null);
 
     return (

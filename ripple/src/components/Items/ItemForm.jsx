@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const categories = [
   { category_id: 1, category_name: "electronics" },
@@ -18,12 +18,22 @@ const ItemForm = ({ onSubmit, user }) => {
   const [formData, setFormData] = useState({
     item_name: "",
     category_id: "",
+    user_id: user?.user_id || "",
     description: "",
     image_url: "",
     collection_point: "",
     date_of_expire: "",
     date_listed: new Date().toISOString().slice(0, 16),
   });
+
+  useEffect(() => {
+    if (user?.user_id) {
+      setFormData((prev) => ({
+        ...prev,
+        user_id: user.user_id,
+      }));
+    }
+  }, [user]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
