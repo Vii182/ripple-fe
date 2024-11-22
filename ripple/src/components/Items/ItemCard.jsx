@@ -1,6 +1,6 @@
 const ItemCard = ({ item }) => {
   return (
-    <div className="min-h-[420px] bg-gray-50 rounded-xl shadow-md overflow-hidden mb-4 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 mx-auto">
+    <div className="min-h-[420px] bg-gray-50 rounded-xl shadow-md overflow-hidden mb-4 hover:shadow-lg transition-all duration-300 ease-in-out transform md:hover:scale-105 mx-auto">
       <div className="min-h-[200px] md:h-[200px] w-full">
         <img
           src={item.image_url}
