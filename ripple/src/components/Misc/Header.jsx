@@ -8,9 +8,9 @@ const quicksand = Quicksand({
 
 const Header = () => {
     return (
-        <header className="flex flex-row sm:flex-row items-center justify-between h-24 bg-gray-100 px-5 shadow-lg">
+        <header className="flex flex-row sm:flex-row items-center justify-between h-24 bg-gray-100 px-5 dark:bg-bg-dark shadow-lg">
             <div>
-                <h1 className="font-Quicksand text-3xl text-black indent-2 sm:mt-0 rounded-2xl font-bold">RIPPLE</h1>
+                <h1 className="font-Quicksand text-3xl text-black dark:text-textPrimary-dark indent-2 sm:mt-0 rounded-2xl font-bold">RIPPLE</h1>
             </div>
             <div>
                 <Navbar />

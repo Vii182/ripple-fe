@@ -24,19 +24,19 @@ const MobileMenu = ({ user, logout }) => {
   };
 
   const linkStyles =
-    "block text-base font-medium text-black hover:text-orange-500";
+    "block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500";
 
   return (
     <div className="relative lg:hidden ">
       <button
         onClick={toggleMenu}
-        className="text-black text-3xl focus:outline-none lg:hidden"
+        className="text-black dark:text-textPrimary-dark text-3xl focus:outline-none lg:hidden"
       >
         <FaBars />
       </button>
       {isOpen && (
         <div
-          className="absolute right-0 mt-2 p-4 bg-white bg-opacity-85 rounded-lg shadow-lg w-48"
+          className="absolute right-0 mt-2 p-4 bg-white dark:bg-border-dark text-textPrimary-light dark:text-textPrimary-dark dark: bg-opacity-85 dark:bg-opacity-85 rounded-lg shadow-lg w-48"
           style={{
             top: "100%",
             zIndex: 1000,
@@ -61,7 +61,7 @@ const MobileMenu = ({ user, logout }) => {
             </Link>
             {user ? (
               <>
-                <span className="block text-base font-medium text-orange-500">
+                <span className="block text-base font-medium text-orange-500 dark:text-lime-500">
                   {user.username.toUpperCase()}
                 </span>
                 <button

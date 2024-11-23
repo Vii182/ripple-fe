@@ -52,15 +52,18 @@ const ItemForm = ({ onSubmit, user }) => {
     onSubmit(formData);
   };
 
+  const labelStyle = "block font-medium font-Quicksand font-semibold text-textPrimary-light dark:text-textPrimary-dark mb-1"
+
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 bg-gray-100 px-8 py-8 rounded-2xl"
+      className="space-y-4 bg-gray-100 dark:bg-border-dark px-8 py-8 rounded-2xl"
     >
       <div>
         <label
           htmlFor="item_name"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           ITEM NAME
         </label>
@@ -70,7 +73,7 @@ const ItemForm = ({ onSubmit, user }) => {
           id="item_name"
           value={formData.item_name}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 rounded-md border dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
           required
         />
       </div>
@@ -78,7 +81,7 @@ const ItemForm = ({ onSubmit, user }) => {
       <div>
         <label
           htmlFor="category_id"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           CATEGORY
         </label>
@@ -87,7 +90,7 @@ const ItemForm = ({ onSubmit, user }) => {
           id="category_id"
           value={formData.category_id}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 border rounded-md dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
           required
         >
           <option value="" disabled>
@@ -104,7 +107,7 @@ const ItemForm = ({ onSubmit, user }) => {
       <div>
         <label
           htmlFor="description"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           DESCRIPTION
         </label>
@@ -113,7 +116,7 @@ const ItemForm = ({ onSubmit, user }) => {
           id="description"
           value={formData.description}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 border rounded-md dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
           required
         />
       </div>
@@ -121,7 +124,7 @@ const ItemForm = ({ onSubmit, user }) => {
       <div>
         <label
           htmlFor="image_url"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           IMAGE URL
         </label>
@@ -131,14 +134,14 @@ const ItemForm = ({ onSubmit, user }) => {
           id="image_url"
           value={formData.image_url}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 border rounded-md dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
         />
       </div>
 
       <div>
         <label
           htmlFor="collection_point"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           COLLECTION POINT
         </label>
@@ -148,7 +151,7 @@ const ItemForm = ({ onSubmit, user }) => {
           id="collection_point"
           value={formData.collection_point}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 border rounded-md dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
           required
         />
       </div>
@@ -156,7 +159,7 @@ const ItemForm = ({ onSubmit, user }) => {
       <div>
         <label
           htmlFor="date_of_expire"
-          className="block font-medium font-Quicksand font-semibold"
+          className={labelStyle}
         >
           EXPIRY DATE (IF ANY)
         </label>
@@ -166,7 +169,7 @@ const ItemForm = ({ onSubmit, user }) => {
           id="date_of_expire"
           value={formData.date_of_expire}
           onChange={handleChange}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 border rounded-md dark:border-textPrimary-light  dark:bg-gray-500 dark:text-textPrimary-dark"
         />
       </div>
 

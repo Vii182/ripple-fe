@@ -20,28 +20,28 @@ const Navbar = () => {
   const linkStyles = "text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500";
 
   return (
-    <nav className="mb-2 sm:mb-0 font-Quicksand text-black flex items-center space-x-6">
+    <nav className="sm:mb-0 font-Quicksand text-textPrimary-light dark:text-textPrimary-dark flex items-center space-x-6">
       <div className="hidden lg:flex items-center space-x-4">
-      <IoHomeOutline className="text-black mx-2" />
+      <IoHomeOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
       <Link href="/" className={linkStyles}>
         HOME
       </Link>
-      <IoBagHandleOutline className="text-black mx-2" />
+      <IoBagHandleOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
       <Link href="/items" className={linkStyles}>
         ITEMS
       </Link>
-      <IoHeartCircleOutline className="text-black mx-2" />
+      <IoHeartCircleOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
       <Link href="/list-an-item" className={linkStyles}>
         LIST AN ITEM
       </Link>
-      <SiFoodpanda className="text-black mx-2" />
+      <SiFoodpanda className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
       <Link href="/foodbanks" className={linkStyles}>
         FOODBANKS
       </Link>
       
       {user ? (
         <>
-          <span className="text-lg sm:text-xl text-orange-400 font-bold">
+          <span className="text-lg sm:text-xl text-orange-400 dark:text-lime-500 font-bold">
              {user.username.toUpperCase()}
           </span>
           <button
@@ -57,8 +57,9 @@ const Navbar = () => {
         </Link>
         
       )}
-      <DarkModeToggle />
+      
     </div>
+    <DarkModeToggle />
     <MobileMenu user={user} logout={logout} />
     </nav>
   );

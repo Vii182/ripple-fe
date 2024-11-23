@@ -7,7 +7,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
+  darkMode: 'class', // Enable dark mode based on class
   theme: {
     extend: {
       fontFamily: {
@@ -15,35 +15,29 @@ module.exports = {
       },
       colors: {
         bg: {
-          light: "#d8f3dc",
-          DEFAULT: "#d8fdc",
-          dark: "#081c15",
+          light: "#f7ffe5", // Soft lime green for light mode
+          dark: "#1e293b", // Slate gray for dark mode
         },
-        text1: {
-          light: "#081c15",
-          DEFAULT: "#081c15",
-          dark: "#d8f3dc",
+        textPrimary: {
+          light: "#1a202c", // Dark gray for light mode
+          dark: "#e2e8f0", // Light slate for dark mode
         },
-        text2: {
-          light: "#1B4332",
-          DEFAULT: "#1B4332",
-          dark: "#b7e4c7",
+        textSecondary: {
+          light: "#718096", // Muted gray for light mode
+          dark: "#cbd5e1", // Softer light text for dark mode
         },
-        accent1: {
-          light: "#2D6A4F",
-          DEFAULT: "#2D6A4F",
-          dark: "#95D5B2",
+        accent: {
+          light: "#84cc16", // Vibrant lime green for light mode
+          dark: "#3b82f6", // Blue accent for dark mode
         },
-        accent2: {
-          light: "#40916C",
-          DEFAULT: "#40916C",
-          dark: "#74C69D",
+        border: {
+          light: "#e2e8f0", // Light gray border for light mode
+          dark: "#4a5568", // Darker slate border for dark mode
         },
-        accent3: {
-          light: "#52B788",
-          DEFAULT: "#52B788",
-          dark: "#52B788",
-        }
+        button: {
+          light: "#a3e635", // Brighter lime for light mode buttons
+          dark: "#475569", // Subtle slate for dark mode buttons
+        },
       },
     },
   },

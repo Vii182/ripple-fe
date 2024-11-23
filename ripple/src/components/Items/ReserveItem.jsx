@@ -5,7 +5,7 @@ const ReserveItem = ({ reserveStatus }) => {
   const { user } = useContext(UserContext);
 
   return (
-    <div className="bg-gray-50 border-8 border-gray-100 shadow-lg mx-2 rounded-2xl p-6 flex-grow">
+    <div className="bg-gray-50 dark:bg-border-dark border-8 border-gray-100 dark:border-gray-800 shadow-lg mx-2 rounded-2xl p-6 flex-grow">
       <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">
         Reserve Item
       </h1>

@@ -39,7 +39,7 @@ const PostItemPage = () => {
   return (
     <section className="min-h-screen">
       <div className="max-w-3xl mx-auto p-4">
-        <h2 className="text-3xl font-Quicksand font-bold mb-6 text-center">LIST AN ITEM</h2>
+        <h2 className="text-3xl font-Quicksand font-bold mb-6 text-center text-textPrimary-light dark:text-textPrimary-dark">LIST AN ITEM</h2>
         <ItemForm onSubmit={handleFormSubmit} user={user} />
         {message && <p className="text-green-500 mt-4">{message}</p>}
         {error && <p className="text-red-500 mt-4">{error}</p>}

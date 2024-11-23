@@ -6,13 +6,13 @@ import { LocationProvider } from "@/context/LocationContext";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark:bg-gray-900 dark:text-gray-200 bg-white text-gray-800">
       <body>
         <LocationProvider>
           <UserProvider>
             <Header />
-            <div className="bg-gradient-to-b from-white via-lime-500 to-white">
-              <div className="h-2 bg-gradient-to-r from-white to-lime-500 shadow-lg"></div>
+            <div className="bg-gradient-to-b from-white via-lime-500 to-white dark:from-gray-800 dark:via-gray-700 dark:to-gray-900">
+              <div className="h-2 bg-gradient-to-r from-white to-lime-500 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 shadow-xl"></div>
               <BackButton />
               {children}
             </div>
