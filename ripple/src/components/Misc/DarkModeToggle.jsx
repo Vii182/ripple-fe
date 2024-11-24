@@ -29,9 +29,9 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 rounded-md text-gray-800 dark:text-white mb-1 lg:mb-0" aria-label="Toggle dark mode" title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+      className="rounded-md text-gray-800 dark:text-white" aria-label="Toggle dark mode" title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
-      <CgDarkMode size={24} />
+      <CgDarkMode size={28} />
     </button>
   );
 };

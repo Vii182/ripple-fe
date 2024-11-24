@@ -9,6 +9,7 @@ import { SiFoodpanda } from "react-icons/si";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoHeartCircleOutline } from "react-icons/io5";
 import DarkModeToggle from "./DarkModeToggle";
+import { IoPersonCircle } from "react-icons/io5";
 
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
@@ -60,6 +61,9 @@ const Navbar = () => {
       
     </div>
     <DarkModeToggle />
+    <Link href="/profile">
+    <IoPersonCircle className="text-textPrimary-light dark:text-textPrimary-dark" size={28} />
+    </Link>
     <MobileMenu user={user} logout={logout} />
     </nav>
   );
