@@ -20,7 +20,6 @@ function getItems(category = null, sorted = "date_listed", order = "desc") {
 function getItemById(item_id) {
     return axios.get(`${baseUrl}/items/${item_id}`).then(({ data }) => {
         const item = data.item;
-        console.log(item)
         return item;
     }).catch((err) => {
         console.error("Error fetching Item", err);
@@ -30,7 +29,6 @@ function getItemById(item_id) {
 
 function getUserbyUsername(username) {
     return axios.get(`${baseUrl}/users/${username}`).then(({ data }) => {
-        console.log(data)
         const user = data.user;
         return user;
     }).catch((err) => {
@@ -40,7 +38,6 @@ function getUserbyUsername(username) {
 }
 
 function postItem(itemData) {
-    console.log(itemData)
     return axios.post(`${baseUrl}/items`, itemData).then(({ data }) => data)
     .catch((err) => {
         console.error("Error posting Item!", err);
@@ -48,4 +45,8 @@ function postItem(itemData) {
     });
 }
 
-export { getItems, getItemById, getUserbyUsername, postItem }
+function addUser(userData) {
+    return axios.post(`${baseUrl}/users`, userData);
+}
+
+export { getItems, getItemById, getUserbyUsername, postItem, addUser }

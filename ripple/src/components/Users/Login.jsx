@@ -26,7 +26,7 @@ const LoginForm = () => {
     <div className="login-component">
       {user ? (
         <>
-          <span className="font-Quicksand text-black text-lg font-semibold flex justify-center text-center">
+          <span className="font-Quicksand text-black dark:text-textPrimary-dark text-lg font-semibold flex justify-center text-center">
             WELCOME {user.username.toUpperCase()}
           </span>
           <button

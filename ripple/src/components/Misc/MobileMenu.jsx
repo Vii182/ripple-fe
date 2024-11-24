@@ -59,6 +59,9 @@ const MobileMenu = ({ user, logout }) => {
             <Link href="/foodbanks" className={linkStyles} onClick={closeMenu}>
               FOODBANKS
             </Link>
+            <Link href="/profile" className={linkStyles} onClick={closeMenu}>
+              PROFILE
+            </Link>
             {user ? (
               <>
                 <span className="block text-base font-medium text-orange-500 dark:text-lime-500">
