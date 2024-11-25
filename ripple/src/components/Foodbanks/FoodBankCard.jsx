@@ -4,13 +4,10 @@ export default function FoodBankCard({ foodBank }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleFetch = () => {
-        Promise.all(
-            foodBanks.map((bank) =>
-                fetch(bank.urls.self).then((res) => res.json())
-            )
-        )
+        fetch(foodBank.urls.self)
+            .then((response) => response.json())
             .then((data) => {
-                setNeeds(data.map((d) => d.need.needs));
+                setNeeds(data.need.needs);
                 setIsExpanded(!isExpanded);
             })
             .catch((err) => console.error(err));
