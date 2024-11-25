@@ -63,4 +63,13 @@ function addUser(userData) {
     return axios.post(`${baseUrl}/users`, userData);
 }
 
-export { getItems, getItemById, getUserbyUsername, postItem, addUser }
+function getFoodBanks(){
+    return axios.get('https://www.givefood.org.uk/api/2/foodbanks/').then(({ data }) => {
+      return data;
+    }).catch((err) => {
+      console.error("Error fetching Foodbanks", err);
+      throw err;
+    });
+  };
+
+export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks }
