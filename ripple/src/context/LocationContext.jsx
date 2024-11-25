@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const LocationContext = createContext();
 
 export const LocationProvider = ({ children }) => {
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState({});
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export const LocationProvider = ({ children }) => {
     }
   }, []);
 
+  console.log(location);
   return (
     <LocationContext.Provider value={{ location, error }}>
       {children}

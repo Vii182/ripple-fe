@@ -1,14 +1,28 @@
 import axios from "axios";
+import { useState } from "react";
+
 
 const baseUrl = "https://ripple-be.onrender.com/api";
 
 function getItems(category = null, sorted = "date_listed", order = "desc") {
+    const userLocation = {};
     const params = { sorted, order };
     if (category) {
         params.category = category;
-    }
+    } 
+    if (sorted === "distance") {
+        navigator.geolocation.getCurrentPosition((position) => {
+          userLocation.lat = position.coords.latitude;
+          userLocation.long = position.coords.longitude;
+        });
+        params.userLocation = userLocation;
+      }
+    console.log(userLocation);
+
+    console.log(params)
     return axios.get(`${baseUrl}/items`, {params})
     .then(({ data }) => {
+        console.log(data);
         const items = data.items;
         return items;
     }).catch((err) => {

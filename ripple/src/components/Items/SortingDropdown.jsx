@@ -1,5 +1,10 @@
+import { LocationContext } from "@/context/LocationContext";
+import { useSearchParams } from "next/navigation";
+import { useContext, useState } from "react";
 
 const SortingDropdown = ({ onSort, sorted, order }) => {
+  const { userLocation } = useContext(LocationContext);
+
   const handleSortChange = (event) => {
     const newSortField = event.target.value;
     onSort(newSortField, order);
@@ -19,6 +24,7 @@ const SortingDropdown = ({ onSort, sorted, order }) => {
       >
         <option value="date_listed">Date Posted</option>
         <option value="item_name">Item Name</option>
+        {/* <option value="distance">Distance</option> */}
       </select>
       <button
         onClick={handleSortToggle}
