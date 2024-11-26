@@ -48,7 +48,7 @@ export default function FoodBankCard({ foodBank }) {
                     </p>
                     <button
                         onClick={handleFetch}
-                        className="text-black dark:text-accent-dark hover:underline text-left text-lg font-semibold"
+                        className="text-lime-500 dark:text-accent-dark hover:underline text-left text-lg font-semibold"
                     >
                         {isExpanded ? "Hide" : "Items this foodbank needs:"}
                     </button>

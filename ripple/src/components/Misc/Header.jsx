@@ -12,7 +12,7 @@ const Header = () => {
         <header className="flex flex-row sm:flex-row items-center justify-between h-24 bg-gray-100 px-5 dark:bg-bg-dark shadow-lg">
             <div>
                 <Link href="/" className="text-decoration-none">
-                    <h1 className="font-Quicksand ripple-text text-4xl font-bold text-black">
+                    <h1 className="font-Quicksand text-4xl font-bold text-textPrimary-light dark:text-textPrimary-dark">
                         RIPPLE
                     </h1>
                 </Link>

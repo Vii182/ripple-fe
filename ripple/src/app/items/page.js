@@ -106,7 +106,7 @@ export default function ItemsPage() {
             />
           </div>
         </div>
-        <div className="flex flex-wrap gap-4 px-4 my-6">
+        {/* <div className="flex flex-wrap gap-4 px-4 my-6">
           {categories.map((category) => (
             <Link
               key={category.category_id}
@@ -122,7 +122,7 @@ export default function ItemsPage() {
               </div>
             </Link>
           ))}
-        </div>
+        </div> */}
         <div className="px-4">
           <ItemsList sorted={sortBy} order={order} lat={lat} long={long} />
         </div>
