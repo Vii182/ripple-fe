@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "@/context/UserContext";
-import { getItems } from "../functions/api";
+import { deleteItem, getItems } from "../functions/api";
 import Link from "next/link";
 import { getUserbyUsername } from "../functions/api";
 import Loading from "@/components/Misc/Loading";
@@ -39,7 +39,24 @@ const ProfilePage = () => {
         });
     }
   }, [user]);
+const handleDelete= (event)=>{
 
+  deleteItem(event.target.value).then((data)=>{
+      if (user) {
+      getItems()
+        .then((allitems) => {
+          const filteredItems = allitems.filter(
+            (item) => item.user_id === user.user_id
+          );
+          setUserItems(filteredItems);
+        })
+        .catch((error) => {
+          console.error("Error fetching users items.", error);
+        });
+    }
+  })
+
+}
   if (loading) {
     return (
         <Loading className="min-h-screen"/>
@@ -106,10 +123,11 @@ const ProfilePage = () => {
           {userItems.length > 0 ? (
             <ul>
               {userItems.map((item) => (
+             
                 <li
                   key={item.item_id}
                   className="flex items-center border p-2 rounded-lg mb-4 hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
+                >   <div className="justify-between">
                   <Link href={`/items/${item.item_id}`} passHref>
                     <div className="flex items-center">
                       <img
@@ -125,9 +143,16 @@ const ProfilePage = () => {
                           {item.description}
                         </p>
                       </div>
+                   
                     </div>
                   </Link>
+                  <div>
+                  <button className=' px-4 py-2 rounded-lg bg-red-500 text-textPrimary-dark disabled:opacity-50 
+                  hover:shadow-lg transition-all duration-300 ease-in-out transform md:hover:scale-105 mx-auto' onClick={handleDelete} value={item.item_id}>delete</button>
+                </div>
+                 </div>
                 </li>
+               
               ))}
             </ul>
           ) : (

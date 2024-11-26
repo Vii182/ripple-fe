@@ -69,6 +69,22 @@ function getFoodBanks(){
     });
   };
 
+function reserveItem(item,user_id){
+    item.reserved_for_id= user_id;
+    item.reserve_status=true;
+      return axios.patch(`${baseUrl}/items/${item.item_id}`, item).then(({ data }) => data)
+    .catch((err) => {
+        console.error("Error posting Item!", err);
+        throw err;
+    });
 
+}
+function deleteItem (item_id){
+     return axios.delete(`${baseUrl}/items/${item_id}`).then(({ data }) => data)
+    .catch((err) => {
+        console.error("Error posting Item!", err);
+        throw err;
+    });
+}
 
-export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks }
+export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks,reserveItem,deleteItem }

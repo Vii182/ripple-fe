@@ -27,7 +27,7 @@ const ItemCard = ({ item }) => {
             Date Listed: {new Date(item.date_listed).toLocaleDateString()}
           </p>
         <p className="text-sm text-accent2">
-          {item.reserve_status === "Available" ? (
+          {item.reserve_status === true ? (
             <span className="text-red-600">● Reserved</span>
           ) : (
             <span className="text-green-600">● Available</span>
