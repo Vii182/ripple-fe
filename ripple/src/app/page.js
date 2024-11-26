@@ -2,6 +2,7 @@
 import { getItems, getFoodBanks } from "./functions/api";
 import { useEffect, useState } from "react";
 import FeaturedItems from "@/components/Home/FeaturedItems";
+import giving from "../../public/giving.jpg";
 
 export default function Home() {
   const [featuredItems, setFeaturedItems] = useState([]);
