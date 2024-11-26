@@ -59,7 +59,10 @@ const handleDelete= (event)=>{
 }
   if (loading) {
     return (
-        <Loading className="min-h-screen"/>
+      <section className="min-h-screen bg-transparent">
+        <Loading />
+      </section>
+        
     )
   }
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import FeaturedItems from "@/components/Home/FeaturedItems";
 import DecoratedImage from "@/components/Home/DecoratedImage";
 import HowItWorks from "@/components/Home/HowItWorks";
+import CategoriesIconBar from "@/components/Home/CategoriesIconBar";
 
 export default function Home() {
   const [featuredItems, setFeaturedItems] = useState([]);
@@ -58,22 +59,35 @@ export default function Home() {
             </p>
           )}
         </div>
-        <div className="flex-grow border-t border-white mx-4 opacity-50 mt-5"></div>
+        <div className="flex-grow border-t w-full border-white opacity-50 mt-5"></div>
       </header>
 
-      <main className="flex items-center justify-center flex-1 flex-col flex-grow px-4">
+      <main className="flex items-center justify-center flex-1 flex-col flex-grow px-4 relative">
         <HowItWorks />
+        <div className="border-t border-white w-[90%] mb-5 opacity-50"></div>
         <DecoratedImage />
+        <div className="border-t border-white w-[90%] mb-5 opacity-50"></div>
         <h2 className="text-2xl sm:text-3xl font-semibold font-Quicksand text-textPrimary-light dark:text-textPrimary-dark text-center mb-6 px-4 break-words max-w-full">
           CHECK OUT THE LATEST ITEMS FROM THE COMMUNITY
         </h2>
+        <div className="border-t border-white w-[90%] mb-5 opacity-50"></div>
         {loadingItems ? (
           <p className="text-center text-gray-500">Loading featured items...</p>
         ) : (
           <FeaturedItems items={featuredItems} />
         )}
+        <div className="flex justify-center items-center w-full mt-5">
+          <div className="justify-center items-center border-t border-white w-[90%] mb-5 opacity-50"></div>
+        </div>
+        <h2 className="mb-5 text-2xl sm:text-3xl font-semibold font-Quicksand text-textPrimary-light dark:text-textPrimary-dark text-center px-4 break-words max-w-full">
+          OR VIEW ITEMS BY CATEGORY
+        </h2>
+        <CategoriesIconBar />
+        <div className="flex justify-center items-center w-full">
+          <div className="justify-center items-center border-t border-white w-[90%] mb-5 opacity-50"></div>
+        </div>
       </main>
-      <div className="flex-grow border-t border-white mx-4 px-4 opacity-50 mt-5"></div>
+      
     </section>
   );
 }
