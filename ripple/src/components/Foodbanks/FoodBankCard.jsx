@@ -23,7 +23,6 @@ export default function FoodBankCard({ foodBank }) {
             foodBank.name + " " + foodBank.address
         );
         const [lat, lng] = foodBank.lat_lng.split(",");
-
         window.open(
             `https://www.google.com/maps/search/${exactAddress}/@${lat},${lng},17z`,
             "_blank"
