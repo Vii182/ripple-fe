@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       {isOpen && (
         <p className="text-center mt-4">
-         By participating in the Ripple community, you can donate items you no longer need, give back to those in your area, and help support others through a network of sharing. Whether you have household goods, clothing, or food to offer, Ripple makes it easy to get involved and make a difference. Whether you have household goods, clothing, or food to offer, Ripple makes it easy to get involved and make a difference. Join us today, and start contributing to a more sustainable and caring world. Every donation matters!
+         By participating in the Ripple community, you can donate items you no longer need, give back to those in your area, and help support others through a network of sharing. Whether you have household goods, clothing, or food to offer, Ripple makes it easy to get involved and make a difference. Join us today, and start contributing to a more sustainable and caring world. Every donation matters!
         </p>
       )}
     </div>
