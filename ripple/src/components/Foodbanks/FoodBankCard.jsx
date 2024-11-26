@@ -9,7 +9,7 @@ export default function FoodBankCard({ foodBank }) {
         fetch(foodBank.urls.self)
             .then((response) => response.json())
             .then((data) => {
-                setNeeds(data.need?.needs || "No specific needs listed.");
+                setNeeds(data.need.needs);
                 setIsExpanded(!isExpanded);
             })
             .catch((err) => {
