@@ -44,7 +44,7 @@ const ItemDetails = ({ item, errorCode }) => {
       </div>
       <div className="mt-6 flex flex-col md:flex-row gap-6">
         <div className="flex-1">
-          <ReserveItem reserveStatus={item.reserve_status} />
+          <ReserveItem item={item} />
         </div>
       </div>
     </>
