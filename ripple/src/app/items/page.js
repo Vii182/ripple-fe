@@ -76,11 +76,20 @@ const categories = [
 export default function ItemsPage() {
   const [sortBy, setSortBy] = useState("date_listed");
   const [order, setOrder] = useState("desc");
+  const [long, setLong] = useState(null);
+  const [lat, setLat] = useState(null);
 
   const handleSortChange = (newSortBy, newOrder) => {
     setSortBy(newSortBy);
     setOrder(newOrder);
   };
+
+  if (sortBy === "distance") {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLong(position.coords.longitude);
+      setLat(position.coords.latitude);
+    });
+  }
 
   return (
     <section>
@@ -115,7 +124,7 @@ export default function ItemsPage() {
           ))}
         </div>
         <div className="px-4">
-          <ItemsList sorted={sortBy} order={order} />
+          <ItemsList sorted={sortBy} order={order} lat={lat} long={long} />
         </div>
       </main>
     </section>

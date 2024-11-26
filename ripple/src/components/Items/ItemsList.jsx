@@ -9,6 +9,8 @@ const ItemsList = ({
   category = null,
   sorted = "date_listed",
   order = "desc",
+  lat = null,
+  long = null,
 }) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +19,7 @@ const ItemsList = ({
   useEffect(() => {
     setLoading(true);
     setErrorCode(null);
-    getItems(category, sorted, order)
+    getItems(category, sorted, order, long, lat)
       .then((itemsData) => {
         setItems(itemsData);
         setLoading(false);

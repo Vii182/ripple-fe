@@ -20,14 +20,13 @@ export default function FoodBankCard({ foodBank }) {
 
     const openGoogleMaps = () => {
         const exactAddress = encodeURIComponent(
-            `${foodBank.name} ${foodBank.address}`
+            foodBank.name + " " + foodBank.address
         );
-        const [lat, lng] = foodBank.lat_lng?.split(",") || [];
-        const mapsUrl =
-            lat && lng
-                ? `https://www.google.com/maps/@${lat},${lng},17z`
-                : `https://www.google.com/maps/search/${exactAddress}`;
-        window.open(mapsUrl, "_blank");
+        const [lat, lng] = foodBank.lat_lng.split(",");
+        window.open(
+            `https://www.google.com/maps/search/${exactAddress}/@${lat},${lng},17z`,
+            "_blank"
+        );
     };
 
     return (

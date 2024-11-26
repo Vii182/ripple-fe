@@ -42,7 +42,7 @@ const ProfilePage = () => {
 
   if (loading) {
     return (
-        <Loading />
+        <Loading className="min-h-screen"/>
     )
   }
 

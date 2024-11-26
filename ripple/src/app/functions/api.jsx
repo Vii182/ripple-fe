@@ -4,20 +4,17 @@ import { useState } from "react";
 
 const baseUrl = "https://ripple-be.onrender.com/api";
 
-function getItems(category = null, sorted = "date_listed", order = "desc") {
-    const userLocation = {};
-    const params = { sorted, order };
+function getItems(category = null, sorted = "date_listed", order = "desc", long = null, lat = null) {
+    const params = { sorted, order, long, lat };
+    
     if (category) {
         params.category = category;
-    } 
-    if (sorted === "distance") {
-        navigator.geolocation.getCurrentPosition((position) => {
-          userLocation.lat = position.coords.latitude;
-          userLocation.long = position.coords.longitude;
-        });
-        params.userLocation = userLocation;
-      }
-    console.log(userLocation);
+    }
+
+    if (sorted === "distance"){
+        params.long = -3.6240035
+        params.lat = 51.7468088
+    }
 
     console.log(params)
     return axios.get(`${baseUrl}/items`, {params})
@@ -71,5 +68,7 @@ function getFoodBanks(){
       throw err;
     });
   };
+
+
 
 export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks }

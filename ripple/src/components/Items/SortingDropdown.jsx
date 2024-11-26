@@ -24,7 +24,7 @@ const SortingDropdown = ({ onSort, sorted, order }) => {
       >
         <option value="date_listed">Date Posted</option>
         <option value="item_name">Item Name</option>
-        {/* <option value="distance">Distance</option> */}
+        <option value="distance">Distance</option>
       </select>
       <button
         onClick={handleSortToggle}
