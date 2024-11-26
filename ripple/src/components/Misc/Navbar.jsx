@@ -33,8 +33,8 @@ const Navbar = () => {
                     ITEMS
                 </Link>
                 <IoHeartCircleOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
-                <Link href="/list-an-item" className={linkStyles}>
-                    LIST AN ITEM
+                <Link href="/donate" className={linkStyles}>
+                    DONATE
                 </Link>
                 <SiFoodpanda className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
                 <Link href="/foodbanks" className={linkStyles}>

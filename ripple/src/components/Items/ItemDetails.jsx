@@ -50,7 +50,7 @@ const ItemDetails = ({ item, errorCode }) => {
                     </p>
                 </div>
             </div>
-            <div className="mt-6 flex flex-col md:flex-row gap-6">
+            <div className="mt-6 flex flex-row gap-6">
                 <div className="flex-1">
                     <ReserveItem item={item} />
                 </div>
