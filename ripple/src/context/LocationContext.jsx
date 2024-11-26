@@ -24,8 +24,7 @@ export const LocationProvider = ({ children }) => {
       setError("Geolocation is not supported by your browser.");
     }
   }, []);
-
-  console.log(location);
+  
   return (
     <LocationContext.Provider value={{ location, error }}>
       {children}
