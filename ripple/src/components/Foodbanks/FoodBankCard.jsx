@@ -28,7 +28,7 @@ export default function FoodBankCard({ foodBank }) {
             "_blank"
         );
     };
-
+    
     return (
         <div className="container mx-auto px-4">
             <div className="h-full bg-gray-50 dark:bg-border-dark rounded-xl shadow-md overflow-hidden mb-4 hover:shadow-lg transition-all duration-300 ease-in-out transform md:hover:scale-105 mx-auto mt-3 flex flex-col hover:animate-gradient-shimmer">
