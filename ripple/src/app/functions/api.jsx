@@ -79,5 +79,12 @@ function reserveItem(item,user_id){
     });
 
 }
+function deleteItem (item_id){
+     return axios.delete(`${baseUrl}/items/${item_id}`).then(({ data }) => data)
+    .catch((err) => {
+        console.error("Error posting Item!", err);
+        throw err;
+    });
+}
 
-export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks,reserveItem }
+export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks,reserveItem,deleteItem }
