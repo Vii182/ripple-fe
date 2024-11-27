@@ -95,10 +95,10 @@ const ProfilePage = () => {
     return (
         <section className="flex flex-col items-center justify-center min-h-screen bg-transparent px-4">
             <div className="max-w-4xl w-full p-12 bg-white dark:bg-border-dark rounded-lg shadow-lg mb-5">
-                <h2 className="text-5xl font-Quicksand font-bold text-lime-500 mb-6 text-center">
-                    {user.username}&apos;s Profile
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-Quicksand font-bold text-lime-500 mb-6 text-center">
+                    {user.username.toUpperCase()}&apos;S PROFILE
                 </h2>
-                <div className="flex flex-col items-center mb-6">
+                <div className="flex flex-col items-center mb-6 font-Quicksand">
                     {userData?.avatar_url && (
                         <img
                             src={userData.avatar_url}
@@ -106,30 +106,30 @@ const ProfilePage = () => {
                             className="w-32 h-32 rounded-full mb-4"
                         />
                     )}
-                    <h2 className="font-Quicksand font-bold text-3xl mb-5 text-textPrimary-light dark:text-textPrimary-dark">
+                    <h2 className="font-bold text-3xl mb-5 mt-2 text-textPrimary-light dark:text-textPrimary-dark">
                         USER DETAILS
                     </h2>
                     <div className="bg-transparent border rounded-lg p-6 w-full text-center">
-                        <h2 className="text-2xl w-fu font-Quicksand font-semibold text-textSecondary-light dark:text-textSecondary-dark">
+                        <h2 className="text-xl md:text-2xl  lg:text-4xl text-textSecondary-light dark:text-textSecondary-dark">
                             Name: {userData?.name || user.username}
                         </h2>
                         {userData?.area && (
-                            <p className="text-2xl text-textSecondary-light dark:text-textSecondary-dark">
+                            <p className="text-xl md:text-2xl md:mt-2 lg:text-4xl text-textSecondary-light dark:text-textSecondary-dark">
                                 Location: {userData.area}
                             </p>
                         )}
                         {userData?.username && (
-                            <p className="font-semibold text-2xl text-textSecondary-light dark:text-textSecondary-dark">
+                            <p className="text-xl md:text-2xl md:mt-2 lg:text-4xl md:text-2xl lg:text-4xlxl text-textSecondary-light dark:text-textSecondary-dark">
                                 Username: {userData.username}
                             </p>
                         )}
                         {userData?.area && (
-                            <p className="text-2xl text-textSecondary-light dark:text-textSecondary-dark">
+                            <p className="text-xl md:text-2xl md:mt-2 lg:text-4xl text-textSecondary-light dark:text-textSecondary-dark">
                                 Location: {userData.area}
                             </p>
                         )}
-                        {userData?.email && userData?.email.length < 25 && (
-                            <p className="font-semibold text-2xl text-textSecondary-light dark:text-textSecondary-dark">
+                        {userData?.email && userData?.email.length < 15 && (
+                            <p className="text-xl md:text-2xl md:mt-2 lg:text-4xl text-textSecondary-light dark:text-textSecondary-dark">
                                 Email: {userData.email}
                             </p>
                         )}
@@ -183,8 +183,8 @@ const ProfilePage = () => {
                             ))}
                         </ul>
                     ) : (
-                        <p className="text-1xl text-center text-orange-500 dark:text-lime-500">
-                            You haven’t posted any items yet.
+                        <p className="text-1xl text-center text-orange-500 dark:text-lime-500 font-Quicksand font-bold">
+                            You haven&apos;t posted any items yet.
                         </p>
                     )}
                 </div>

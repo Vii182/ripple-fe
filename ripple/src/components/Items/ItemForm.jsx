@@ -23,6 +23,7 @@ const ItemForm = ({ onSubmit, user }) => {
         image_url: "",
         collection_point: "",
         date_of_expire: "",
+        reserve_status: false,
         date_listed: new Date().toISOString().slice(0, 16),
     });
 

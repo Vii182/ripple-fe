@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import { addUser } from "../functions/api";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const SignUpPage = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         username: "",
         name: "",
@@ -21,7 +22,7 @@ const SignUpPage = () => {
         addUser(formData)
             .then(() => {
                 alert("Account Created Successfully! Please Login >.<");
-                redirect("/login");
+                router.push("/login");
             })
             .catch((error) => {
                 console.error(error);
