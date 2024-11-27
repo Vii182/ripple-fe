@@ -39,18 +39,21 @@ module.exports = {
                     dark: "#475569", // Subtle slate for dark mode buttons
                 },
             },
-            keyframes: {
-                shimmer: {
-                    "0%": { backgroundPosition: "200% 0" },
-                    "100%": { backgroundPosition: "-200% 0" },
-                },
-            },
             animation: {
-                "gradient-shimmer": "shimmer 3s infinite",
+                "text-gradient": "text-gradient 2s linear",
             },
-            backgroundImage: {
-                "gradient-shimmer":
-                    "linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%)",
+            keyframes: {
+                "text-gradient": {
+                    "0%": {
+                        "background-position": "0% center",
+                    },
+                    "50%": {
+                        "background-position": "100% center",
+                    },
+                    "100%": {
+                        "background-position": "0% center",
+                    },
+                },
             },
         },
     },
