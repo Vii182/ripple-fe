@@ -13,7 +13,7 @@ export default function DecoratedImage() {
           alt="Giving back to the community"
           className="w-full h-[300px] object-cover"
           placeholder="blur"
-          layout="responsive"
+          style="responsive"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4">
         {user ? (
