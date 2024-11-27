@@ -54,7 +54,7 @@ export default function FoodbanksPage() {
         <section>
             <main className="bg-transparent flex min-h-screen items-center justify-center flex-1 flex-col flex-grow font-Quicksand">
                 <h1 className="text-4xl text-textPrimary-light dark:text-textPrimary-dark mb-6">
-                    Local Foodbanks
+                    Local Food banks
                 </h1>
                 <h2 className="text-2xl text-textPrimary-light dark:text-textPrimary-dark mb-6">
                     Food banks that you can help or use!
@@ -63,7 +63,10 @@ export default function FoodbanksPage() {
                 <FoodBankList foodBanks={currentFoodBanks} />
                 <div className="flex justify-center gap-2 mt-10 mb-10">
                     <button
-                        onClick={() => setCurrentPage(currentPage - 1)}
+                        onClick={() => {
+                            setCurrentPage(currentPage - 1),
+                                window.scrollTo(0, 0);
+                        }}
                         disabled={currentPage === 1}
                         className="px-4 py-2 rounded-lg bg-button-light dark:bg-button-dark text-textPrimary-light dark:text-textPrimary-dark disabled:opacity-50 hover:shadow-lg transition-all duration-300 ease-in-out transform md:hover:scale-105 mx-auto"
                     >
@@ -73,7 +76,10 @@ export default function FoodbanksPage() {
                         Page {currentPage} of {totalPages}
                     </span>
                     <button
-                        onClick={() => setCurrentPage(currentPage + 1)}
+                        onClick={() => {
+                            setCurrentPage(currentPage + 1),
+                                window.scrollTo(0, 0);
+                        }}
                         disabled={currentPage === totalPages}
                         className="px-4 py-2 rounded-lg bg-button-light dark:bg-button-dark text-textPrimary-light dark:text-textPrimary-dark disabled:opacity-50 hover:shadow-lg transition-all duration-300 ease-in-out transform md:hover:scale-105 mx-auto"
                     >
