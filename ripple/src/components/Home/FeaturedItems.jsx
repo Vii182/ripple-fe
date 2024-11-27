@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FeaturedItems({ items }) {
   return (
-    <section className="py-2 bg-transparent">
+    <section className="py-2 bg-transparent w-[95%]">
       <Carousel
         showThumbs={false}
         infiniteLoop={true}

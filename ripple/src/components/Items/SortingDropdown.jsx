@@ -16,7 +16,7 @@ const SortingDropdown = ({ onSort, sorted, order }) => {
   };
 
   return (
-    <div className="ml-0 sm:ml-4 mt-2 flex items-center space-x-2 justify-center sm:justify-start">
+    <div className="mt-2 flex items-center space-x-2 justify-center sm:justify-start">
       <select
         value={sorted}
         onChange={handleSortChange}

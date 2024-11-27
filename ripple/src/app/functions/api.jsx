@@ -15,10 +15,8 @@ function getItems(category = null, sorted = "date_listed", order = "desc", long 
         params.lat = 51.7468088
     }
 
-    console.log(params)
     return axios.get(`${baseUrl}/items`, {params})
-    .then(({ data }) => {
-        console.log(data);
+    .then(({ data }) => {;
         const items = data.items;
         return items;
     }).catch((err) => {

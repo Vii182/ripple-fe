@@ -50,11 +50,11 @@ const MobileMenu = ({ user, logout }) => {
               ITEMS
             </Link>
             <Link
-              href="/list-an-item"
+              href="/donate"
               className={linkStyles}
               onClick={closeMenu}
             >
-              LIST AN ITEM
+              DONATE
             </Link>
             <Link href="/foodbanks" className={linkStyles} onClick={closeMenu}>
               FOODBANKS

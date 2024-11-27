@@ -2,11 +2,10 @@ import Maps from "../Misc/Maps";
 import ReserveItem from "./ReserveItem";
 
 const ItemDetails = ({ item, errorCode }) => {
-  if (errorCode) {
-    return <p>Error!</p>;
-  }
-
-  return (
+    if (errorCode) {
+        return <p>Error!</p>;
+    }
+ return (
     <>
    
       <div className="bg-gray-50 dark:bg-border-dark rounded-2xl shadow-lg border-8 border-gray-100 dark:border-gray-900 mx-2">
