@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="margin-leftcontainer flex flex-col py-5 lg:flex-row justify-between items-center mx-auto font-bold text-textPrimary-light dark:text-textPrimary-dark">
                 <div className="text-center hidden lg:block">
                     <p>&#169;404Squad</p>
-                    <Link href={"https://www.givefood.org.uk/"}>
+                    <Link href="https://www.givefood.org.uk/" target="_blank">
                         <u>Food bank data API</u>
                     </Link>
                 </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                 </div>
                 <div className="text-center  lg:hidden  mt-4">
                     <p>&#169;404Squad</p>
-                    <Link href={"https://www.givefood.org.uk/"}>
+                    <Link href="https://www.givefood.org.uk/" target="_blank">
                         <u>Food bank data API</u>
                     </Link>
                 </div>
