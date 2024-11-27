@@ -82,6 +82,14 @@ function deleteItem (item_id){
         console.error("Error posting Item!", err);
         throw err;
     });
+
 }
 
-export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks,reserveItem,deleteItem }
+function  fetchLocationMap(url){
+        return  axios.get(url).then(({data})=>{
+               return data
+        }).catch((err)=>{
+            throw err;
+        })
+}
+export { getItems, getItemById, getUserbyUsername, postItem, addUser, getFoodBanks,reserveItem,deleteItem ,fetchLocationMap}
