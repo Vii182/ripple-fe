@@ -33,7 +33,7 @@ export default function DecoratedImage() {
         ) : (
           <>
             <h2 className="text-2xl md:text-3xl font-bold text-white">
-              Don't have an account?
+             Don&apos;t have an account?
             </h2>
             <p className="text-sm md:text-base text-gray-300 mt-2">
               Sign up now to start contributing to the community and make a difference!

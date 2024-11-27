@@ -70,7 +70,7 @@ const handleDelete= (event)=>{
     return (
       <section className="flex items-center text-textPrimary-light dark:text-textPrimary-dark font-Quicksand justify-center h-screen bg-transparent px-4">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">You're not logged in</h2>
+          <h2 className="text-2xl font-bold mb-4">You are not logged in</h2>
           <p>Please login or sign up to view your profile.</p>
           <div className="mt-4">
             <Link href="/login">
@@ -90,7 +90,7 @@ const handleDelete= (event)=>{
     <section className="flex flex-col items-center justify-center min-h-screen bg-transparent px-4">
       <div className="max-w-4xl w-full p-12 bg-white dark:bg-border-dark rounded-lg shadow-lg mb-5">
         <h2 className="text-5xl font-Quicksand font-bold text-lime-500 mb-6 text-center">
-          {user.username}'s Profile
+          {user.username}&apos;s Profile
         </h2>
         <div className="flex flex-col items-center mb-6">
           {userData?.avatar_url && (
