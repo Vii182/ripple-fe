@@ -23,9 +23,6 @@ const MobileMenu = ({ user, logout }) => {
     closeMenu();
   };
 
-  const linkStyles =
-    "block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500";
-
   return (
     <div className="relative lg:hidden ">
       <button
@@ -43,23 +40,23 @@ const MobileMenu = ({ user, logout }) => {
           }}
         >
           <div className="space-y-4">
-            <Link href="/" className={linkStyles} onClick={closeMenu}>
+            <Link href="/" className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500" onClick={closeMenu}>
               HOME
             </Link>
-            <Link href="/items" className={linkStyles} onClick={closeMenu}>
+            <Link href="/items" className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500" onClick={closeMenu}>
               ITEMS
             </Link>
             <Link
               href="/donate"
-              className={linkStyles}
+              className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500"
               onClick={closeMenu}
             >
               DONATE
             </Link>
-            <Link href="/foodbanks" className={linkStyles} onClick={closeMenu}>
+            <Link href="/foodbanks" className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500" onClick={closeMenu}>
               FOODBANKS
             </Link>
-            <Link href="/profile" className={linkStyles} onClick={closeMenu}>
+            <Link href="/profile" className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500" onClick={closeMenu}>
               PROFILE
             </Link>
             {user ? (
@@ -75,7 +72,7 @@ const MobileMenu = ({ user, logout }) => {
                 </button>
               </>
             ) : (
-              <Link href="/login" className={linkStyles} onClick={closeMenu}>
+              <Link href="/login" className="block text-base font-medium text-textPrimary-light dark:text-textPrimary-dark hover:text-orange-500 dark:hover:text-lime-500" onClick={closeMenu}>
                 LOGIN
               </Link>
             )}

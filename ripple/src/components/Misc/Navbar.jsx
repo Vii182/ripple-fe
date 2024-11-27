@@ -18,26 +18,24 @@ const Navbar = () => {
         redirect("/");
     };
 
-    const linkStyles =
-        "text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500";
 
     return (
         <nav className="sm:mb-0 font-Quicksand text-textPrimary-light dark:text-textPrimary-dark flex items-center space-x-6">
             <div className="hidden lg:flex items-center space-x-4">
                 <IoHomeOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
-                <Link href="/" className={linkStyles}>
+                <Link href="/" className="text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500">
                     HOME
                 </Link>
                 <IoBagHandleOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
-                <Link href="/items" className={linkStyles}>
+                <Link href="/items" className="text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500">
                     ITEMS
                 </Link>
                 <IoHeartCircleOutline className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
-                <Link href="/donate" className={linkStyles}>
+                <Link href="/donate" className="text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500">
                     DONATE
                 </Link>
                 <SiFoodpanda className="text-textPrimary-light dark:text-textPrimary-dark mx-2" />
-                <Link href="/foodbanks" className={linkStyles}>
+                <Link href="/foodbanks" className="text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500">
                     FOODBANKS
                 </Link>
 
@@ -56,7 +54,7 @@ const Navbar = () => {
                         </button>
                     </>
                 ) : (
-                    <Link href="/login" className={linkStyles}>
+                    <Link href="/login" className="text-lg sm:text-xl font-medium transition-all duration-300 ease-in-out transform hover:scale-110 hover:text-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-500">
                         LOGIN
                     </Link>
                 )}
