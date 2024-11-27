@@ -4,6 +4,7 @@ import BackButton from "@/components/BackButton";
 import "./globals.css";
 import { LocationProvider } from "@/context/LocationContext";
 import ScrollToTop from "@/components/Misc/ScrollToTop";
+import Footer from "@/components/Misc/Footer";
 
 export default function RootLayout({ children }) {
   return (
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
               <BackButton />
               {children}
             </div>
+            <Footer />
           </UserProvider>
         </LocationProvider>
       </body>

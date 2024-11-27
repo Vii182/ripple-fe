@@ -37,7 +37,7 @@ const Maps=({item})=>{
 
 return (
     <>
-   <div className="h-3/4 w-3/4"id='map-container' ref={mapContainerRef}/>
+   <div className="container h-full w-full"id='map-container' ref={mapContainerRef}/>
     </>
   )
 }

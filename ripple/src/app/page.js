@@ -84,7 +84,7 @@ export default function Home() {
         </h2>
         <CategoriesIconBar />
         <div className="flex justify-center items-center w-full">
-          <div className="justify-center items-center border-t border-white w-[90%] mb-5 opacity-50"></div>
+          <div className="justify-center items-center border-t border-white w-[90%] mb-12 opacity-50"></div>
         </div>
       </main>
       
