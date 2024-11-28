@@ -41,7 +41,7 @@ export default function FoodBankCard({ foodBank }) {
         <div className="container mx-auto px-4">
             <div className="h-full bg-gray-50 hover:bg-gray-200 dark:bg-border-dark dark:hover:bg-slate-700 rounded-xl shadow-md overflow-hidden mb-4 hover:shadow-lg transition-all duration-300 ease-in-out transform mx-auto mt-3 flex flex-col">
                 <div className="p-4 flex flex-col gap-2 font-Quicksand">
-                    <h2 className="text-xl font-semibold text-textPrimary-light dark:text-textPrimary-dark">
+                    <h2 className="text-xl sm:text-lg font-semibold text-textPrimary-light dark:text-textPrimary-dark">
                         {foodBank.name}
                     </h2>
                     <div
