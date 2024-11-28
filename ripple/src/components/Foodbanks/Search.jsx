@@ -15,7 +15,7 @@ export default function Search({ onSearch }) {
             value={searchTerm}
             onChange={handleSearch}
             placeholder="Search by location..."
-            className="w-full text-black max-w-md p-3 mb-6 rounded-lg border border-gray-300 dark:border-gray-600"
+            className="w-4/5 sm:w-full text-black max-w-md p-3 mb-6 rounded-lg border border-gray-300 dark:border-gray-600"
         />
     );
 }
