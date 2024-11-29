@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const baseUrl = "https://ripple-be.onrender.com/api";
+const baseUrl = "https://ripple-be-820b.onrender.com/api";
 
 function getItems(category = null, sorted = "date_listed", order = "desc", long = null, lat = null) {
     const params = { sorted, order, long, lat };
